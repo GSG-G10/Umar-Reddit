@@ -77,8 +77,8 @@ button {
   font-size: 1rem;
 }
 a{
-  text-decoration: none;
-  color:#114e86;
+    text-decoration: none;
+    color:#114e86;
 }
 a:hover {
   color: #949494;

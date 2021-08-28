@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Style/signUp.css" />
+    <link
+      rel="shortcut icon"
+      href="https://www.reddiquette.com/wp-content/uploads/2020/09/What-Is-The-Reddit-Logo-Called.png"
+    />
+    <title>Reddit - signUp</title>
+  </head>
+  <body>
+    <container class="container">
+      <div class="cover">
+        <img
+          src="https://www.adweek.com/wp-content/uploads/2021/06/ClubhoueIconDandaraPagu-1024x1024.jpg"
+          alt="Cover"
+        />
+      </div>
+      <form class="form" method="post" action="/signUpValidation">
+        <span>
+          <h1>Sign up Now !</h1>
+        </span>
+        <span>
+            <h2>username :</h2>
+            <input name="username" type="text" placeholder="Enter Your username" />
+          </span>
+          <span>
+            <h2>Email :</h2>
+            <input name="email" type="email" placeholder="Enter Your Email" />
+          </span>
+        <span>
+          <h2>Password :</h2>
+          <input
+            name="password"
+            type="password"
+            placeholder="Enter Your Password"
+          />
+        </span>
+        <span>
+            <h2>Password  :</h2>
+            <input
+              name="password"
+              type="password"
+              placeholder="Enter Your Password"
+            />
+          </span>
+        <button type="submit">Sign up</button>
+        <button class="OauthButton" type="submit">Sign up With Google</button>
+        <a href="/"> << Return to Home</a>
+      </form>
+    </container>
+  </body>
+</html>
