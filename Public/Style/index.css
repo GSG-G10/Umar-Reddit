@@ -7,6 +7,8 @@
 
 body {
     background-color: #DAE0E6;
+    display:flex;
+    justify-content:center;
 }
 
 header {
@@ -127,5 +129,33 @@ header {
     }
 }
 
+.main {
+    width: 80%;
+    position: absolute;
+    top: 15vh;
+}
+.TrendingTopics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    width: 100%;
+}
 
-/************************ end heder media ********************/
+.topicContainer {
+    background-color: #1A2129;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 70vw;
+    height: 50vh;
+}
+
+.topicDetails{
+    display: flex;
+}
+.overview {
+    padding-top: 2rem;
+    height: 10px;
+    text-align: justify;
+}
