@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #949494;
+}
+
+.container {
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  border: 0.5px solid #949494;
+  justify-content: space-between;
+}
+.cover {
+  width: 50%;
+  height: 100%;
+}
+.cover img {
+  width: 100%;
+  height: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 45%;
+}
+h1 img {
+  height: 5vh;
+  width: 3vw;
+  padding-top: 1vh;
+}
+
+span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 15%;
+}
+input {
+  width: 75%;
+  height: 50%;
+  border: 0.5px solid #949494;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  justify-content: flex-start;
+}
+button {
+  width: 75%;
+  height: 7%;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.OauthButton {
+  background-color: #114e86;
+}
+.signup {
+  font-size: 1rem;
+}
+a:hover {
+  color: #949494;
+}
+.OauthButton:hover,
+button:hover {
+  background-color: #949494;
+}
