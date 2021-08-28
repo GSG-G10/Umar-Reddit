@@ -6,6 +6,8 @@ const express = require('express');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 
+const router = require('./Routes');
+
 const app = express();
 
 app.disabled('x-powered-by');
@@ -17,5 +19,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, '..', 'Public')));
+
+app.use(router);
 
 module.exports = app;
