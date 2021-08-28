@@ -5,6 +5,9 @@ const {
 const {
   loginPageHandler,
 } = require('./SignIn');
+const {
+  signUpPageHandler,
+} = require('./SignUp');
 
 const {
   clientError,
@@ -16,4 +19,5 @@ module.exports = {
   clientError,
   serverError,
   loginPageHandler,
+  signUpPageHandler,
 };
