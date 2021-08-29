@@ -8,6 +8,7 @@ const createResultedElement = (element, parent, classname) => {
   return item;
 };
 
+// eslint-disable-next-line no-unused-vars
 const createNewsCard = (response) => {
   setTimeout(() => {
     loading.classList.add('hidden');
@@ -34,11 +35,3 @@ const createNewsCard = (response) => {
     readMore.innerText = 'Read More';
   }
 };
-
-const getTrendingTopics = () => {
-  fetch('/trending_topics')
-    .then((response) => response.json())
-    .then((data) => createNewsCard(data))
-    .catch((err) => console.log(err));
-};
-getTrendingTopics();

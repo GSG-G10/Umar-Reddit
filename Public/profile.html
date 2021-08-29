@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Style/index.css" />
+    <link rel="stylesheet" href="../Style/profile.css" />
     <link
       rel="shortcut icon"
       href="https://www.reddiquette.com/wp-content/uploads/2020/09/What-Is-The-Reddit-Logo-Called.png"
@@ -15,9 +15,8 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <title>Reddit - Dive into anything</title>
+    <title>Reddit - Profile</title>
   </head>
-
   <body>
     <header class="header">
       <a href="/">
@@ -27,29 +26,38 @@
           alt="logo"
         />
       </a>
-      <div class="search-input">
-        <i class="fal fa-search"></i>
-        <input
-          class="search-field"
-          type="text"
-          aria-selected="true"
-          placeholder="Search Reddit"
-        />
-      </div>
-      <div class="login-signup">
-        <a class="log-btn" href="./login">Log In</a>
-        <a class="sign-btn" href="./signup">Sign Up</a>
-        <a class="user-profile" href="./profile/userId"><i class="fal fa-user"></i></a>
-      </div>
+      <h1>Welcome<a class="welcoming" href="#"></a></h1>
+      <a class="log-out" href="../logOut"
+        ><i class="fa fa-sign-out fa-2x"></i
+      ></a>
     </header>
-    <main class="main">
-      <div class="Loading-container">
-        <img
-          class="loading"
-          src="https://media0.giphy.com/media/iFgzUCWgxj7B22ik2K/giphy.gif?cid=6c09b952dw2bzbjtacbxjktjrhixir2h5njuyx5i70zcjyf7&rid=giphy.gif&ct=s"
-        />
+    <div class="right">
+      <div class="User-Card">
+        <div class="user-img">
+          <img class="userImg"
+            src=""
+          />
+          <h1 class="username">Umar Salah</h1>
+        </div>
       </div>
-      <section class="TrendingTopics"></section>
+      <form method="post" action="/CreatePost" class="footer">
+        <input
+          id="postName"
+          type="text"
+          placeholder="Post title"
+          required
+        />
+        <input
+          id="postContent"
+          type="text"
+          placeholder="What are you thinking about ?"
+          required
+        />
+        <button type="submit" class="btn btn-submit">Share</button>
+      </form>
+    </div>
+    <div class="left">
+      <h1>Your Posts :</h1>
       <li>
         <div class="post-wrapper-light">
           <div class="component-wrapper-light">
@@ -58,22 +66,19 @@
           </div>
           <div class="content-wrapper-light">
             <div class="title-wrapper-light">
-              <a href="/a/programming/5d0c1a419ba137182ef2721a">FizzleDizzle</a>
+              <a href="/a/programming/5d0c1a419ba137182ef2721a">Title</a>
             </div>
-            <div class="post-text-wrapper-light">
-              Now lemme tell ya something, young blood.
-            </div>
+            <div class="post-text-wrapper-light">Post details</div>
             <div class="detail-wrapper-light">
               <a href="/a/programming/5d0c1a419ba137182ef2721a">255 comments</a
               ><a href="/a/programming">/a/programming</a><span>by</span
-              ><a class="owner-light" href="/u/Beeezle">Beeezle</a
+              ><a class="owner-light" href="/u/Beeezle">user</a
               ><span>2Y ago</span>
             </div>
           </div>
         </div>
       </li>
-    </main>
-    <script src="./Script/dom.js"></script>
-    <script src="./Script/index.js"></script>
+    </div>
+    <script src="../Script/profile.js"></script>
   </body>
 </html>

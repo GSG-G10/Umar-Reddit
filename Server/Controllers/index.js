@@ -5,10 +5,17 @@ const {
 const {
   loginPageHandler,
 } = require('./SignIn');
+
 const {
   signUpPageHandler,
   createNewUser,
 } = require('./SignUp');
+
+const {
+  profilePageHandler,
+  getUserId,
+  getUserData,
+} = require('./Profile');
 
 const {
   clientError,
@@ -21,5 +28,8 @@ module.exports = {
   serverError,
   loginPageHandler,
   signUpPageHandler,
+  profilePageHandler,
   createNewUser,
+  getUserId,
+  getUserData,
 };
