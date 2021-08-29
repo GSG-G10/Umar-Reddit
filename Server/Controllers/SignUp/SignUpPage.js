@@ -1,8 +1,9 @@
 const { join } = require('path');
 
+// eslint-disable-next-line consistent-return
 const signUpPageHandler = (req, res) => {
   if (req.cookies.logged) {
-    return res.redirect('/profile');
+    return res.redirect(`/profile/${req.userId}`);
   }res.sendFile(join(__dirname, '..', '..', '..', 'Public', 'signUp.html'));
 };
 
