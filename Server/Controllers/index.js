@@ -7,6 +7,7 @@ const {
 } = require('./SignIn');
 const {
   signUpPageHandler,
+  createNewUser,
 } = require('./SignUp');
 
 const {
@@ -20,4 +21,5 @@ module.exports = {
   serverError,
   loginPageHandler,
   signUpPageHandler,
+  createNewUser,
 };

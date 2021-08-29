@@ -185,8 +185,15 @@ img {
   padding-top: 1rem;
   text-align: justify;
 }
-.loading {
+.Loading-container {
   height: 800px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.Loading-container img{
+  height:10vh;
+  width: 10vw;
 }
 .hidden {
   display: none;

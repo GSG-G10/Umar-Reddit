@@ -19,18 +19,22 @@
           alt="Cover"
         />
       </div>
-      <form class="form" method="post" action="/signUpValidation">
+      <form class="form" method="POST" action="/signUpValidation">
         <span>
           <h1>Sign up Now !</h1>
         </span>
         <span>
-            <h2>username :</h2>
-            <input name="username" type="text" placeholder="Enter Your username" />
-          </span>
-          <span>
-            <h2>Email :</h2>
-            <input name="email" type="email" placeholder="Enter Your Email" />
-          </span>
+          <h2>username :</h2>
+          <input
+            name="username"
+            type="text"
+            placeholder="Enter Your username"
+          />
+        </span>
+        <span>
+          <h2>Email :</h2>
+          <input name="email" type="email" placeholder="Enter Your Email" />
+        </span>
         <span>
           <h2>Password :</h2>
           <input
@@ -40,14 +44,14 @@
           />
         </span>
         <span>
-            <h2>Password  :</h2>
-            <input
-              name="password"
-              type="password"
-              placeholder="Enter Your Password"
-            />
-          </span>
-        <button type="submit">Sign up</button>
+          <h2>Password :</h2>
+          <input
+            name="confirmPassword"
+            type="password"
+            placeholder="Confirm Your Password"
+          />
+        </span>
+        <button type="submit">Create Account</button>
         <button class="OauthButton" type="submit">Sign up With Google</button>
         <a href="/"> << Return to Home</a>
       </form>
