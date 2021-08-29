@@ -13,6 +13,7 @@ const getUserData = () => {
   fetch('/UserData')
     .then((data) => data.json())
     .then((data) => assignData(data[0]))
+    // eslint-disable-next-line no-console
     .catch((err) => console.error(err));
 };
 getUserData();
