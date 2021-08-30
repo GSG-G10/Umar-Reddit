@@ -1,12 +1,22 @@
-const { singupSchema } = require('./SignupSchema');
+const {
+  singupSchema,
+} = require('./SignupSchema');
+
+const {
+  loginSchema,
+} = require('./LoginSchema');
+
+const {
+  hashPassword,
+} = require('./HashPasswords');
 
 const {
   comparePasswords,
-  hashPassword,
-} = require('./HashPasswords');
+} = require('./ComparePasswords');
 
 module.exports = {
   singupSchema,
   comparePasswords,
   hashPassword,
+  loginSchema,
 };
