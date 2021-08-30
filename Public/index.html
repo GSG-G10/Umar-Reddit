@@ -39,9 +39,22 @@
       <div class="login-signup">
         <a class="log-btn" href="./login">Log In</a>
         <a class="sign-btn" href="./signup">Sign Up</a>
-        <a class="user-profile" href="./profile/:userId"><i class="fal fa-user"></i></a>
+        <a class="user-profile" href="./profile/:userId"
+          ><i class="fal fa-user"></i
+        ></a>
+        <button class="add-post hidden"><i class="fas fa-plus-square fa-2x"></i></button>
       </div>
     </header>
+    <form method="post" action="/CreatePost" class="form-popup">
+      <input id="postName" type="text" placeholder="Post title" required />
+      <input
+        id="postContent"
+        type="text"
+        placeholder="What are you thinking about ?"
+        required
+      />
+      <button type="submit" class="btn btn-submit">Share</button>
+    </form>
     <main class="main">
       <div class="Loading-container">
         <img
@@ -72,6 +85,35 @@
           </div>
         </div>
       </li>
+      <div class="right">
+        <div class="communities-near">
+          <div class="lists">
+            <ul class="list-all">
+              <li><a href="/">Help</a></li>
+              <li><a href="/">Coins</a></li>
+              <li><a href="/">Reddit</a></li>
+              <li><a href="/">Premium</a></li>
+              <li><a href="/">Topics</a></li>
+              <li><a href="/">Reddit</a></li>
+              <li><a href="/">Gifts</a></li>
+              <li><a href="/">Communities</a></li>
+            </ul>
+
+            <ul class="list-all">
+              <li><a href="/">About</a></li>
+              <li><a href="/">Careers</a></li>
+              <li><a href="/">Press</a></li>
+              <li><a href="/">Advertise</a></li>
+              <li><a href="/">Communities</a></li>
+              <li><a href="/">Terms</a></li>
+              <li><a href="/">Content Policy</a></li>
+              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="/">Mod Policy</a></li>
+            </ul>
+          </div>
+          <p>Reddit Inc © 2021 . All rights reserved</p>
+        </div>
+      </div>
     </main>
     <script src="./Script/dom.js"></script>
     <script src="./Script/index.js"></script>
