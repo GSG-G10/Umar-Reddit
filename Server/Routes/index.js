@@ -15,17 +15,18 @@ const {
 const {
   signupValidation,
   userToken,
-  ChecksignedIn,
+  checkSignedIn,
 } = require('../Middlewares');
 
 router.get('/trendingTopics', TrendingTopicsAPI);
 
 router.get('/login', getUserId, loginPageHandler);
+// router.post('/signInValidation');
 
 router.get('/signup', getUserId, signUpPageHandler);
 router.post('/signUpValidation', signupValidation, createNewUser, userToken);
 
-router.get('/profile/:userId', ChecksignedIn, profilePageHandler);
+router.get('/profile/:userId', checkSignedIn, profilePageHandler);
 router.get('/UserData', getUserId, getUserData);
 
 router.use(clientError);
