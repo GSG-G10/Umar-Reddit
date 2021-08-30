@@ -1,9 +1,11 @@
 const signupValidation = require('./SignupValidation');
-const userToken = require('./UserToken');
+const signinValidation = require('./SigninValidation');
 const checkSignedIn = require('./ChecksignedIn');
+const userToken = require('./UserToken');
 
 module.exports = {
   signupValidation,
-  userToken,
+  signinValidation,
   checkSignedIn,
+  userToken,
 };

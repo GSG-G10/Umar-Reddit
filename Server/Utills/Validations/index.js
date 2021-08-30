@@ -3,8 +3,8 @@ const {
 } = require('./SignupSchema');
 
 const {
-  loginSchema,
-} = require('./LoginSchema');
+  signinSchema,
+} = require('./SigninSchema');
 
 const {
   hashPassword,
@@ -16,7 +16,7 @@ const {
 
 module.exports = {
   singupSchema,
+  signinSchema,
   comparePasswords,
   hashPassword,
-  loginSchema,
 };

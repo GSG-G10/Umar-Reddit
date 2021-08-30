@@ -1,11 +1,13 @@
 const addNewUser = require('./AddNewUser');
 const getUserId = require('./GetUserId');
 const getUserDataQuery = require('./GetUserData');
-const CheckUserEmail = require('./CheckUserEmail');
+const checkUserEmail = require('./CheckUserEmail');
+const getUserPassword = require('./GetUserPassword');
 
 module.exports = {
   addNewUser,
   getUserId,
   getUserDataQuery,
-  CheckUserEmail,
+  checkUserEmail,
+  getUserPassword,
 };

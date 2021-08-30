@@ -14,6 +14,7 @@ const {
 
 const {
   signupValidation,
+  signinValidation,
   userToken,
   checkSignedIn,
 } = require('../Middlewares');
@@ -21,7 +22,7 @@ const {
 router.get('/trendingTopics', TrendingTopicsAPI);
 
 router.get('/login', getUserId, loginPageHandler);
-// router.post('/signInValidation',userToken);
+router.post('/signInValidation', signinValidation, userToken);
 
 router.get('/signup', getUserId, signUpPageHandler);
 router.post('/signUpValidation', signupValidation, createNewUser, userToken);
