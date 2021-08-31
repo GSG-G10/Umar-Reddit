@@ -30,7 +30,8 @@ module.exports = (req, res, next) => {
                 .then((id) => {
                   req.body.userId = id.rows[0].id;
                   next();
-                });
+                })
+                .catch(({ message }) => res.status(400).json({ msg: message }));
             }
           }))
           .catch((err) => res.json(err));
