@@ -19,7 +19,7 @@
           alt="Cover"
         />
       </div>
-      <form class="form" method="post" action="/signInValidation">
+      <div class="form">
         <span>
           <h1>
             Sign In
@@ -30,14 +30,14 @@
         </span>
         <span>
           <h2>Email :</h2>
-          <input name="email" type="email" placeholder="Enter Your Email" required />
+          <input id="email" name="email" type="email" placeholder="Enter Your Email" required />
         </span>
         <span>
           <h2>Password :</h2>
-          <input name="password" type="password" placeholder="Enter Your Password" required />
+          <input id="password" name="password" type="password" placeholder="Enter Your Password" required />
         </span>
-        <button type="submit">Sign In</button>
-        <button class="OauthButton" type="submit">Sign In With Google</button>
+        <button id="submit">Sign In</button>
+        <div id="errors" style="color: red;"></div> 
 
         <h2 class ="signup">
           Dont Have an account? <a href="/signup">Click Here to sign up</a>
@@ -45,5 +45,6 @@
         <a href="/"> << Return to Home</a>
       </form>
     </container>
+    <script src="./Script/postSignIn.js"></script>
   </body>
 </html>
