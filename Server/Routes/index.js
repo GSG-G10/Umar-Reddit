@@ -10,6 +10,7 @@ const {
   serverError,
   getUserId,
   getUserData,
+  logoutPageHandler,
 } = require('../Controllers');
 
 const {
@@ -29,6 +30,8 @@ router.post('/signUpValidation', signupValidation, createNewUser, userToken);
 
 router.get('/profile/:userId', checkSignedIn, profilePageHandler);
 router.get('/UserData', getUserId, checkSignedIn, getUserData);
+
+router.get('/logOut', logoutPageHandler);
 
 router.use(clientError);
 router.use(serverError);

@@ -12,6 +12,10 @@ const {
 } = require('./SignUp');
 
 const {
+  logoutPageHandler,
+} = require('./LogOut');
+
+const {
   profilePageHandler,
   getUserId,
   getUserData,
@@ -32,4 +36,5 @@ module.exports = {
   createNewUser,
   getUserId,
   getUserData,
+  logoutPageHandler,
 };
