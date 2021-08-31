@@ -1,5 +1,7 @@
+const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const confirmPassword = document.getElementById('confirmPassword');
 
 const submit = document.getElementById('submit');
 
@@ -7,11 +9,13 @@ const errors = document.getElementById('errors');
 
 submit.addEventListener('click', () => {
   const userData = {
+    username: username.value,
     email: email.value,
     password: password.value,
+    confirmPassword: confirmPassword.value,
   };
 
-  fetch('/signInValidation', {
+  fetch('/signUpValidation', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

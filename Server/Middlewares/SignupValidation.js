@@ -18,8 +18,8 @@ module.exports = (req, res, next) => {
             req.body.value = value;
             next();
           })
-          .catch((err) => res.status(403).json(err));
+          .catch((err) => res.status(403).json({ message: err.message }));
       }
     })
-    .catch((err) => res.status(403).json(err));
+    .catch((err) => res.status(403).json({ message: err.message }));
 };
