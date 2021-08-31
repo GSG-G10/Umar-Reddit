@@ -31,10 +31,10 @@ module.exports = (req, res, next) => {
                   req.body.userId = id.rows[0].id;
                   next();
                 })
-                .catch(({ message }) => res.status(401).json({ msg: message }));
+                .catch(({ message }) => res.status(403).json({ msg: message }));
             }
           }))
-          .catch((err) => res.status(401).json(err));
+          .catch((err) => res.status(403).json(err));
       }
     });
 };
