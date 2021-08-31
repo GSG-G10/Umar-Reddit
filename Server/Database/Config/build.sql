@@ -5,7 +5,7 @@ comments CASCADE;
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     username VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(100) NOT NULL,
     image_url VARCHAR(255) NOT NULL DEFAULT 'https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg',
     password VARCHAR(255) NOT NULL
 );

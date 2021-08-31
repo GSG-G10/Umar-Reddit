@@ -10,15 +10,16 @@ module.exports = (req, res, next) => {
   const { email } = req.body;
   checkUserEmail(email)
     .then((exists) => {
-      if (exists === true) {
+      if (exists.rows[0].exists) {
         res.json({ message: 'There is already an accout with this email address.' });
       } else {
         singupSchema.validateAsync(req.body)
           .then((value) => {
             req.body.value = value;
             next();
-          });
+          })
+          .catch((err) => res.status(400).json(err));
       }
     })
-    .catch(({ message }) => res.status(400).json({ msg: message }));
+    .catch((err) => res.status(400).json(err));
 };
