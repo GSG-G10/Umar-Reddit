@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
     .then((value) => value.rows[0].exists)
     .then((value) => {
       if (value === false) {
-        res.json({ message: 'Email or password is not correct' });
+        res.status(403).send({ message: 'Email or password is not correct' });
       } else {
         signinSchema.validateAsync(req.body)
           .then((result) => getUserPassword(result.email))
@@ -24,17 +24,17 @@ module.exports = (req, res, next) => {
           .then((hashedPassword) => comparePasswords(password, hashedPassword))
           .then(((signed) => {
             if (!signed) {
-              res.json({ message: 'Email or password is not correct' });
+              res.status(403).json({ message: 'Email or password is not correct' });
             } else {
               getUserId(email)
                 .then((id) => {
                   req.body.userId = id.rows[0].id;
                   next();
                 })
-                .catch(({ message }) => res.status(400).json({ msg: message }));
+                .catch(({ message }) => res.status(401).json({ msg: message }));
             }
           }))
-          .catch((err) => res.json(err));
+          .catch((err) => res.status(401).json(err));
       }
     });
 };
