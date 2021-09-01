@@ -39,18 +39,25 @@
       <div class="login-signup">
         <a class="log-btn" href="./login">Log In</a>
         <a class="sign-btn" href="./signup">Sign Up</a>
-        <a class="user-profile" href="./profile/:userId"
-          ><i class="fal fa-user"></i
-        ></a>
-        <button class="add-post hidden"><i class="fas fa-plus-square fa-2x"></i></button>
+        <a class="user-profile" href="./profile"><i class="fal fa-user"></i></a>
+        <button class="add-post hidden">
+          <i class="fas fa-plus-square fa-2x"></i>
+        </button>
       </div>
     </header>
     <form method="post" action="/CreatePost" class="form-popup">
-      <input id="postName" type="text" placeholder="Post title" required />
+      <input
+        id="postName"
+        type="text"
+        name="title"
+        placeholder="Post title"
+        required
+      />
       <input
         id="postContent"
         type="text"
         placeholder="What are you thinking about ?"
+        name="content"
         required
       />
       <button type="submit" class="btn btn-submit">Share</button>

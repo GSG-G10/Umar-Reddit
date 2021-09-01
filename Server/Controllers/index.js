@@ -22,19 +22,24 @@ const {
 } = require('./Profile');
 
 const {
+  createPost,
+} = require('./Posts');
+
+const {
   clientError,
   serverError,
 } = require('./Errors');
 
 module.exports = {
-  TrendingTopicsAPI,
-  clientError,
-  serverError,
-  loginPageHandler,
-  signUpPageHandler,
   profilePageHandler,
-  createNewUser,
-  getUserId,
-  getUserData,
+  TrendingTopicsAPI,
   logoutPageHandler,
+  signUpPageHandler,
+  loginPageHandler,
+  createNewUser,
+  getUserData,
+  serverError,
+  clientError,
+  getUserId,
+  createPost,
 };
