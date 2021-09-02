@@ -9,11 +9,19 @@ const assignData = (data) => {
   userImg.src = data.image_url;
   username.textContent = data.username;
 };
-const getUserData = () => {
+
+// eslint-disable-next-line no-unused-vars
+const getUserData = (() => {
   fetch('/UserData')
     .then((data) => data.json())
     .then((data) => assignData(data[0]))
     // eslint-disable-next-line no-console
     .catch((err) => console.error(err));
-};
-getUserData();
+})();
+
+// eslint-disable-next-line no-unused-vars
+const getUserPosts = (() => {
+  fetch('/UserPosts')
+    .then((data) => data.json())
+    .then(console.log);
+})();

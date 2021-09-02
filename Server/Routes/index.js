@@ -12,6 +12,7 @@ const {
   serverError,
   getUserId,
   createPost,
+  getUserPosts,
 } = require('../Controllers');
 
 const {
@@ -30,9 +31,10 @@ router.get('/signup', getUserId, signUpPageHandler);
 router.post('/signUpValidation', signupValidation, createNewUser, userToken);
 
 router.get('/profile', checkSignedIn, profilePageHandler);
-router.get('/UserData', getUserId, checkSignedIn, getUserData);
+router.get('/UserData', getUserId, getUserData);
+router.get('/UserPosts', getUserId, getUserPosts);
 
-router.post('/CreatePost', getUserId, createPost, profilePageHandler);
+router.post('/CreatePost', checkSignedIn, getUserId, createPost);
 
 router.get('/logOut', logoutPageHandler);
 
