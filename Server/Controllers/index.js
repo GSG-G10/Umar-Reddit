@@ -24,6 +24,7 @@ const {
 
 const {
   createPost,
+  deletePost,
 } = require('./Posts');
 
 const {
@@ -43,5 +44,6 @@ module.exports = {
   serverError,
   clientError,
   createPost,
+  deletePost,
   getUserId,
 };

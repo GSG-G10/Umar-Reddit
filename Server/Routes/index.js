@@ -7,19 +7,20 @@ const {
   TrendingTopicsAPI,
   loginPageHandler,
   createNewUser,
+  getUserPosts,
   getUserData,
   clientError,
   serverError,
-  getUserId,
   createPost,
-  getUserPosts,
+  deletePost,
+  getUserId,
 } = require('../Controllers');
 
 const {
   signupValidation,
   signinValidation,
-  userToken,
   checkSignedIn,
+  userToken,
 } = require('../Middlewares');
 
 router.get('/trendingTopics', TrendingTopicsAPI);
@@ -35,6 +36,8 @@ router.get('/UserData', getUserId, getUserData);
 router.get('/UserPosts', getUserId, getUserPosts);
 
 router.post('/CreatePost', checkSignedIn, getUserId, createPost);
+
+router.get('/DeletePost/:postId', checkSignedIn, deletePost);
 
 router.get('/logOut', logoutPageHandler);
 
