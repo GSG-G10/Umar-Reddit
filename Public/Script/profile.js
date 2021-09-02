@@ -41,7 +41,7 @@ const createPostCard = (response) => {
     title.textContent = post.title;
     const deleteButton = createResultedElement('a', titleWrapper, 'deletButton');
     const deleteIcon = createResultedElement('i', deleteButton, 'fas fa-trash');
-    deleteButton.href = `/deletePost/${postId.value}`;
+    deleteButton.href = `/DeletePost/${postId.value}`;
 
     const textWrapper = createResultedElement('div', contentWrapper, 'post-text-wrapper-light');
     textWrapper.textContent = post.content;
