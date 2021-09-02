@@ -19,6 +19,7 @@ const {
   profilePageHandler,
   getUserId,
   getUserData,
+  getUserPosts,
 } = require('./Profile');
 
 const {
@@ -37,9 +38,10 @@ module.exports = {
   signUpPageHandler,
   loginPageHandler,
   createNewUser,
+  getUserPosts,
   getUserData,
   serverError,
   clientError,
-  getUserId,
   createPost,
+  getUserId,
 };

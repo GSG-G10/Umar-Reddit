@@ -19,9 +19,9 @@ header {
 body {
   background-color: #dae0e6;
 }
-.welcoming{
+.welcoming {
   text-decoration: none;
-  color: #f64a4c ;
+  color: #f64a4c;
 }
 .img-logo {
   width: 8.5rem;
@@ -111,8 +111,13 @@ button {
   display: flex;
   flex-direction: column;
 }
+.left h1{
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2vh;
+}
 .left li {
   list-style: none;
+  height: 10vh;
 }
 .post-wrapper-light {
   display: flex;
@@ -130,6 +135,10 @@ button {
 
 .title-wrapper-light {
   display: flex;
+  justify-content: space-between;
+}
+.title-wrapper-light h2{
+ width: 10vw;
 }
 
 .title-wrapper-light a {
