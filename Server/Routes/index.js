@@ -7,12 +7,12 @@ const {
   TrendingTopicsAPI,
   loginPageHandler,
   createNewUser,
+  getUserPosts,
   getUserData,
   clientError,
   serverError,
   getUserId,
   createPost,
-  getUserPosts,
 } = require('../Controllers');
 
 const {
