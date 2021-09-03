@@ -90,7 +90,7 @@ const createPostCard = (response) => {
     const detailWrapper = createResultedElement('div', contentWrapper, 'detail-wrapper-light');
 
     const comments = createResultedElement('a', detailWrapper, 'comments');
-    comments.textContent = 'comments';
+    comments.textContent = 'comment';
     comments.href = `/post/${postId.value}`;
     comments.style.cursor = 'pointer';
 

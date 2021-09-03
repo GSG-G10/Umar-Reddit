@@ -1,16 +1,15 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-const getTrendingTopics = () => {
+const getTrendingTopics = (() => {
   fetch('/trendingTopics')
     .then((response) => response.json())
     .then((data) => createNewsCard(data))
     .catch((err) => (err));
-};
-getTrendingTopics();
+})();
 
-const getPosts = () => {
+const getPosts = (() => {
   fetch('/Posts')
     .then((response) => response.json())
     .then((data) => createPostCard(data))
     .catch((err) => (err));
-};
-getPosts();
+})();

@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const {
   profilePageHandler,
   signUpPageHandler,
@@ -14,6 +13,7 @@ const {
   getPostData,
   clientError,
   serverError,
+  getComments,
   createPost,
   deletePost,
   getUserId,
@@ -49,6 +49,7 @@ router.get('/post/:postId', postToken, postPageHandler);
 router.get('/PostData', getPostData);
 
 router.post('/CreateComment', checkSignedIn, getUserId, createComment);
+router.get('/GetComments', getComments);
 
 router.get('/logOut', logoutPageHandler);
 
