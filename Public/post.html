@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Style/post.css" />
+    <link
+      rel="shortcut icon"
+      href="https://www.reddiquette.com/wp-content/uploads/2020/09/What-Is-The-Reddit-Logo-Called.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Reddit - Post</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <img
+          class="img-logo"
+          src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png"
+          alt="logo"
+        />
+      </a>
+      <a class="log-out" href="/">
+        <i class="fa fa-home fa-2x" style="color: #f64a4c"></i>
+      </a>
+    </header>
+    <div class="main">
+      <div class="post">
+        <li class="li">
+          <div class="post-wrapper-light">
+            <div class="component-wrapper-light">
+              <button class="not-vote-button-light"></button
+              ><span class="span">0</span
+              ><button class="not-unvote-button-light"></button>
+            </div>
+            <div class="content-wrapper-light">
+              <div class="title-wrapper-light">
+                <h2 class="title">Title</h2>
+              </div>
+              <div class="post-text-wrapper-light">This is post content</div>
+              <div class="detail-wrapper-light">
+                <a class="comments" href="/post/1" style="cursor: pointer"
+                  >comments</a
+                ><a class="community">/r/public</a><span class="by">by</span
+                ><a class="owner-light">UserName</a
+                ><span class="time">recently posted</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <div class="comments"></div>
+        <input type="text" class="comment" placeholder="Write your comment">
+      </div>
+    </div>
+    <script src="../Script/post.js"></script>
+  </body>
+</html>

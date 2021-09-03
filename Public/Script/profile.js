@@ -50,7 +50,8 @@ const createPostCard = (response) => {
 
     const comments = createResultedElement('a', detailWrapper, 'comments');
     comments.textContent = 'comments';
-    comments.href = '#';
+    comments.href = `/post/${postId.value}`;
+    comments.style.cursor = 'pointer';
 
     const community = createResultedElement('a', detailWrapper, 'community');
     community.textContent = '/r/public';

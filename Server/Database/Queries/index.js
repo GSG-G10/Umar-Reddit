@@ -2,6 +2,7 @@ const getUserPassword = require('./GetUserPassword');
 const getUserPostsQuery = require('./GetUserPosts');
 const checkUserEmail = require('./CheckUserEmail');
 const getUserDataQuery = require('./GetUserData');
+const getPostDataQuery = require('./GetPostData');
 const deletePostQuery = require('./DeletePost');
 const getAllPosts = require('./GetAllPosts');
 const getMainPost = require('./GetMainPosts');
@@ -12,6 +13,7 @@ const getUserId = require('./GetUserId');
 module.exports = {
   getUserPostsQuery,
   getUserDataQuery,
+  getPostDataQuery,
   getUserPassword,
   deletePostQuery,
   checkUserEmail,
