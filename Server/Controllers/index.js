@@ -23,6 +23,11 @@ const {
 } = require('./Profile');
 
 const {
+  postPageHandler,
+  getPostData,
+} = require('./PostPage');
+
+const {
   createPost,
   deletePost,
   getPosts,
@@ -39,9 +44,11 @@ module.exports = {
   logoutPageHandler,
   signUpPageHandler,
   loginPageHandler,
+  postPageHandler,
   createNewUser,
   getUserPosts,
   getUserData,
+  getPostData,
   serverError,
   clientError,
   createPost,

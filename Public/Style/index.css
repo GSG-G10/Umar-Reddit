@@ -212,14 +212,15 @@ header {
 }
 li {
   list-style: none;
-  width: 50%;
+  width: 60%;
   margin-top: 5vh;
   font-family: "Roboto", sans-serif;
 }
 .post-wrapper-light {
   display: flex;
-  height: auto;
+  height: 100%;
   background-color: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 .content-wrapper-light {
   display: flex;

@@ -6,9 +6,11 @@ const {
   logoutPageHandler,
   TrendingTopicsAPI,
   loginPageHandler,
+  postPageHandler,
   createNewUser,
   getUserPosts,
   getUserData,
+  getPostData,
   clientError,
   serverError,
   createPost,
@@ -22,6 +24,7 @@ const {
   signinValidation,
   checkSignedIn,
   userToken,
+  postToken,
 } = require('../Middlewares');
 
 router.get('/trendingTopics', TrendingTopicsAPI);
@@ -40,6 +43,9 @@ router.get('/UserPosts', getUserId, getUserPosts);
 router.post('/CreatePost', checkSignedIn, getUserId, createPost);
 
 router.get('/DeletePost/:postId', checkSignedIn, deletePost);
+
+router.get('/post/:postId', postToken, postPageHandler);
+router.get('/PostData', getPostData);
 
 router.get('/logOut', logoutPageHandler);
 

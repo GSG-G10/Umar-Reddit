@@ -4,9 +4,8 @@ const getUserId = async (req, res, next) => {
   if (!(req.cookies.logged)) {
     next();
   } else {
-    const { cookie } = req.headers;
-    const newCookie = cookie.split('=')[1];
-    const { userId } = await jwt.decode(newCookie);
+    const { logged } = req.cookies;
+    const { userId } = await jwt.decode(logged);
     req.userId = userId;
     next();
   }
