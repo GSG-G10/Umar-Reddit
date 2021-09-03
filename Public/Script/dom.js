@@ -4,6 +4,7 @@ const loading = document.querySelector('.Loading-container');
 const logBtn = document.querySelector('.log-btn');
 const signBtn = document.querySelector('.sign-btn');
 const addPost = document.querySelector('.add-post');
+const signOutBtn = document.querySelector('.log-out');
 const main = document.querySelector('.main');
 
 document.querySelector('.form-popup').style.display = 'none';
@@ -12,7 +13,9 @@ if (document.cookie.split(';').some((item) => item.trim().startsWith('logged='))
   logBtn.style.display = 'none';
   signBtn.style.display = 'none';
   addPost.classList.remove('hidden');
+  signOutBtn.classList.remove('hidden');
   addPost.style.cursor = 'pointer';
+  signOutBtn.style.cursor = 'pointer';
 }
 
 const openForm = () => {

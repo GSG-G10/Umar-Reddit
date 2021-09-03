@@ -25,7 +25,7 @@ const {
 } = require('../Middlewares');
 
 router.get('/trendingTopics', TrendingTopicsAPI);
-router.get('/Posts', getPosts);
+router.get('/Posts', getUserId, getPosts);
 
 router.get('/login', getUserId, loginPageHandler);
 router.post('/signInValidation', signinValidation, userToken);
