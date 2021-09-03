@@ -14,6 +14,7 @@ const {
   createPost,
   deletePost,
   getUserId,
+  getPosts,
 } = require('../Controllers');
 
 const {
@@ -24,6 +25,7 @@ const {
 } = require('../Middlewares');
 
 router.get('/trendingTopics', TrendingTopicsAPI);
+router.get('/Posts', getPosts);
 
 router.get('/login', getUserId, loginPageHandler);
 router.post('/signInValidation', signinValidation, userToken);
