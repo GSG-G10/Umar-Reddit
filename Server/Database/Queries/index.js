@@ -1,3 +1,4 @@
+const getCommentsQuery = require('./GetCommentsQuery');
 const getUserPassword = require('./GetUserPassword');
 const getUserPostsQuery = require('./GetUserPosts');
 const checkUserEmail = require('./CheckUserEmail');
@@ -13,6 +14,7 @@ const getUserId = require('./GetUserId');
 
 module.exports = {
   getUserPostsQuery,
+  getCommentsQuery,
   getUserDataQuery,
   getPostDataQuery,
   getUserPassword,

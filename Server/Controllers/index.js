@@ -29,6 +29,7 @@ const {
 
 const {
   createComment,
+  getComments,
 } = require('./Comments');
 
 const {
@@ -56,6 +57,7 @@ module.exports = {
   getPostData,
   serverError,
   clientError,
+  getComments,
   createPost,
   deletePost,
   getUserId,
