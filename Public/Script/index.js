@@ -1,8 +1,16 @@
+/* eslint-disable no-undef */
 const getTrendingTopics = () => {
   fetch('/trendingTopics')
     .then((response) => response.json())
-    // eslint-disable-next-line no-undef
     .then((data) => createNewsCard(data))
-    .catch((err) => console.log(err));
+    .catch((err) => (err));
 };
 getTrendingTopics();
+
+const getPosts = () => {
+  fetch('/Posts')
+    .then((response) => response.json())
+    .then((data) => createPostCard(data))
+    .catch((err) => (err));
+};
+getPosts();

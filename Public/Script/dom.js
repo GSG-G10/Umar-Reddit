@@ -1,16 +1,23 @@
+/* eslint-disable no-unused-vars */
 const trendingTopics = document.querySelector('.TrendingTopics');
 const loading = document.querySelector('.Loading-container');
 const logBtn = document.querySelector('.log-btn');
 const signBtn = document.querySelector('.sign-btn');
 const addPost = document.querySelector('.add-post');
+const signOutBtn = document.querySelector('.log-out');
+const main = document.querySelector('.main');
+
 document.querySelector('.form-popup').style.display = 'none';
 
 if (document.cookie.split(';').some((item) => item.trim().startsWith('logged='))) {
   logBtn.style.display = 'none';
   signBtn.style.display = 'none';
   addPost.classList.remove('hidden');
+  signOutBtn.classList.remove('hidden');
   addPost.style.cursor = 'pointer';
+  signOutBtn.style.cursor = 'pointer';
 }
+
 const openForm = () => {
   document.querySelector('.form-popup').style.display = 'block';
 };
@@ -30,7 +37,6 @@ const createResultedElement = (element, parent, classname) => {
   return item;
 };
 
-// eslint-disable-next-line no-unused-vars
 const createNewsCard = (response) => {
   setTimeout(() => {
     loading.classList.add('hidden');
@@ -54,4 +60,47 @@ const createNewsCard = (response) => {
     readMore.href = response[topic].url;
     readMore.innerText = 'Read More';
   }
+};
+
+const createPostCard = (response) => {
+  response.forEach((post) => {
+    const postCard = createResultedElement('li', main, 'li');
+
+    const postId = createResultedElement('input', postCard, 'hidden');
+    postId.type = 'hidden';
+    postId.value = post.id;
+
+    const postWrapper = createResultedElement('div', postCard, 'post-wrapper-light');
+
+    const componentWrapper = createResultedElement('div', postWrapper, 'component-wrapper-light');
+    const voteButton = createResultedElement('button', componentWrapper, 'not-vote-button-light');
+    const votes = createResultedElement('span', componentWrapper, 'span');
+    votes.textContent = '0';
+    const notVoteButton = createResultedElement('button', componentWrapper, 'not-unvote-button-light');
+
+    const contentWrapper = createResultedElement('div', postWrapper, 'content-wrapper-light');
+
+    const titleWrapper = createResultedElement('div', contentWrapper, 'title-wrapper-light');
+    const title = createResultedElement('h2', titleWrapper, 'title');
+    title.textContent = post.title;
+
+    const textWrapper = createResultedElement('div', contentWrapper, 'post-text-wrapper-light');
+    textWrapper.textContent = post.content;
+
+    const detailWrapper = createResultedElement('div', contentWrapper, 'detail-wrapper-light');
+
+    const comments = createResultedElement('a', detailWrapper, 'comments');
+    comments.textContent = 'comments';
+    comments.href = '#';
+
+    const community = createResultedElement('a', detailWrapper, 'community');
+    community.textContent = '/r/public';
+
+    const by = createResultedElement('span', detailWrapper, 'by');
+    by.textContent = 'by';
+    const creator = createResultedElement('a', detailWrapper, 'owner-light');
+    creator.textContent = post.username;
+    const timePosted = createResultedElement('span', detailWrapper, 'time');
+    timePosted.textContent = 'recently posted';
+  });
 };
