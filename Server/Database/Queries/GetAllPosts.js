@@ -1,3 +1,8 @@
 const connection = require('../Connection');
 
-module.exports = () => connection.query('SELECT posts.id,title,content,username FROM POSTS INNER JOIN users ON (posts.user_id = users.id) ORDER BY posts.id DESC ;');
+module.exports = () => connection
+  .query(`SELECT COUNT(comments.id) ,posts.id,title,posts.content,username
+ FROM POSTS INNER JOIN users ON (posts.user_id = users.id) 
+ JOIN comments ON (comments.post_id = posts.id)
+  GROUP BY posts.id,title,posts.content,username
+   ORDER BY posts.id DESC ;`);
