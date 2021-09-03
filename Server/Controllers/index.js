@@ -28,6 +28,10 @@ const {
 } = require('./PostPage');
 
 const {
+  createComment,
+} = require('./Comments');
+
+const {
   createPost,
   deletePost,
   getPosts,
@@ -46,6 +50,7 @@ module.exports = {
   loginPageHandler,
   postPageHandler,
   createNewUser,
+  createComment,
   getUserPosts,
   getUserData,
   getPostData,

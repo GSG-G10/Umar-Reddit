@@ -8,6 +8,7 @@ const {
   loginPageHandler,
   postPageHandler,
   createNewUser,
+  createComment,
   getUserPosts,
   getUserData,
   getPostData,
@@ -46,6 +47,8 @@ router.get('/DeletePost/:postId', checkSignedIn, deletePost);
 
 router.get('/post/:postId', postToken, postPageHandler);
 router.get('/PostData', getPostData);
+
+router.post('/CreateComment', checkSignedIn, getUserId, createComment);
 
 router.get('/logOut', logoutPageHandler);
 
