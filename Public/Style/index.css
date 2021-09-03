@@ -433,6 +433,7 @@ li {
 }
 .right {
   width: 30%;
+  margin-top: 7vh;
 }
 .communities-near {
   position: absolute;
