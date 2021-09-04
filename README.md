@@ -2,7 +2,7 @@
 
 ## :label: Site URL
 
-> [Umar-Reddit](https://umarreddit.herokuapp.com/) :copyright:
+> [Umar-Reddit](https://umar-reddit.herokuapp.com/) :copyright:
 ---
 ## :a: User Story
 
