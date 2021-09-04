@@ -1,3 +1,4 @@
+const deletePostComments = require('./DeletePostComments');
 const getCommentsQuery = require('./GetCommentsQuery');
 const getUserPassword = require('./GetUserPassword');
 const getUserPostsQuery = require('./GetUserPosts');
@@ -13,6 +14,7 @@ const addNewPost = require('./AddNewPost');
 const getUserId = require('./GetUserId');
 
 module.exports = {
+  deletePostComments,
   getUserPostsQuery,
   getCommentsQuery,
   getUserDataQuery,
